@@ -1,10 +1,8 @@
 'use strict';
 
-
-function get_gravatar(email, size) {
+function getGravatar(email, size) {
 
     // MD5 (Message-Digest Algorithm) by WebToolkit
-    // 
 
     var MD5 = function (s) {
         function L(k, d) {
@@ -227,5 +225,5 @@ function get_gravatar(email, size) {
 
     var size = size || 256;
 
-    return 'http://www.gravatar.com/avatar/' + MD5(email) + '.jpg?s=' + size;
+    return 'https://www.gravatar.com/avatar/' + MD5(email) + '.jpg?s=' + size;
 }
