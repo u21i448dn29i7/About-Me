@@ -125,8 +125,29 @@ var americanos = 7;
 var guessesRemaining = 4;
 var exit = false;
 
-if (q6 === 'washington') {
+if (q6 === 'texas') {
+  while (exit !== true) {
+    question = 'You won the guessing game, but you can earn up to 4 bonus points by guessing the number of double short americanos this Texan used to drink in a day. \n\nYou only have ' + guessesRemaining + ' guesses remaining! \n\n\ What do you think?';
 
+    if (guessesRemaining >= 0) {
+      var q8 = prompt(question);
+      if (q8 < americanos) {
+        guessesRemaining--;
+        alert('No, it was more than that.');
+        console.log(question + ':' + q8);
+      } else if (q8 > americanos) {
+        alert('Egads, no.');
+        guessesRemaining--;
+        console.log(question + ':' + q8);
+      } else {
+        currentPoints = currentPoints + guessesRemaining;
+        alert('Congrats, you got it! \n\nYou ended up with ' + guessesRemaining + ' bonus points and a grand total of ' + currentPoints + ' points. \n\nThanks for playing!');
+        console.log(question + ':' + q8);
+        exit = true;
+      }
+    }
+  }
+} else {
   while (exit !== true) {
     question = 'Since you lost all your points, you can redeem yourself with up to 4 bonus points by guessing the number of double short americanos this Texan used to drink in a day. \n\nYou only have ' + guessesRemaining + ' guesses remaining! \n\n\ What do you think?';
 
@@ -147,30 +168,8 @@ if (q6 === 'washington') {
         exit = true;
       }
     } else {
-      alert('Sorry, no bonus points for you. \n\nHow many double short americanos would this Texan dring in a day? \n\nJust like a tootsie pop, the world may never know.');
+      alert('Sorry, no bonus points for you. \n\nHow many double short americanos would this Texan drank in a day? \n\nJust like a Tootsie Pop, the world may never know.');
       exit = true;
-    }
-  }
-} else {
-  while (exit !== true) {
-    question = 'You won the guessing game, but you can earn up to 4 bonus points by guessing the number of double short americanos this Texan used to drink in a day. \n\nYou only have ' + guessesRemaining + ' guesses remaining! \n\n\ What do you think?';
-
-    if (guessesRemaining >= 0) {
-      var q8 = prompt(question);
-      if (q8 < americanos) {
-        guessesRemaining--;
-        alert('No, it was more than that.');
-        console.log(question + ':' + q8);
-      } else if (q8 > americanos) {
-        alert('Egads, no.');
-        guessesRemaining--;
-        console.log(question + ':' + q8);
-      } else {
-        currentPoints = currentPoints + guessesRemaining;
-        alert('Congrats, you got it! \n\nYou ended up with ' + guessesRemaining + ' bonus points and a grand total of ' + currentPoints + ' points. \n\nThanks for playing!');
-        console.log(question + ':' + q8);
-        exit = true;
-      }
     }
   }
 }
