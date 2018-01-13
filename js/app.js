@@ -122,17 +122,3 @@ do {
 while (q6 !== 'washington' && q6 !== 'texas');
 
 
-question = 'Thanks for playing, ' + user + '! Do you want to play again?';
-do {
-  var q7 = (prompt(question)).toLowerCase();
-  if (q7 === 'y' || q7 === 'yes') {
-    console.log(question + ':' + q7);
-    location.reload();
-  } else if (q7 === 'n' || q7 === 'no') {
-    console.log(question + ':' + q7);
-  } else {
-    alert('I think you made a typo. You entered \'' + q7 + '\'. Try again!');
-    console.log(question + ':' + q7);
-  }
-}
-while (q7 !== 'y' && q7 !== 'n' && q7 !== 'yes' && q7 !== 'no');
