@@ -7,34 +7,31 @@
     <title>About Me</title>
     <!-- <link rel="stylesheet" href="css/reset.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/helpers.js"></script>
 </head>
 
 <body>
     <header>
         <h1>A little something about this guy:</h1>
     </header>
-    <!-- 
-        Gravatars show up in the oddest places. 
-        https://en.gravatar.com/site/implement/images/      
-    -->
-    <div class="gravatar">
-        <script>
-            document.write('<img src="' + getGravatar('bryan@beb.com', 300) + '" />');
-        </script>
-    </div>
-    <div class="buttonDiv">
-        <button onclick="guessWhereThisDudeIsFrom()" type="button">Guess where this dude is from!</button>
-    </div>
-  
+
+    <section>
+        <article>
+            <img src="https://www.gravatar.com/avatar/d26fb5e5edde4a7e51569d112a19d5fb.jpg?s=300" alt="some dude" />
+        </article>
+        <article>
+            <ul>
+                <li>
+
+                </li>
+            </ul>
+        </article>
+
+    </section>
     <div>
         <!-- ha! upside down. perfect. -->
         <footer>
-            <span class="copyleft">&copy; 
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                <a href="https://www.beb.com">www.beb.com</a> 
+            <span class="copyleft">&copy; 2018
+                <a href="https://www.beb.com">www.beb.com</a>
             </span>
         </footer>
     </div>
