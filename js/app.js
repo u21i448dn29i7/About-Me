@@ -16,6 +16,7 @@ do {
 }
 while (!user);
 
+
 question = 'Do you think Bryan talks with a drawl?';
 do {
   // Unresolved bug here and in each subsequent question. See LJ-code201-day5.md for more information.
@@ -131,6 +132,7 @@ if (q6 === 'texas') {
 
     if (guessesRemaining >= 0) {
       var q8 = prompt(question);
+      q8 = parseInt(q8);
       if (q8 < americanos) {
         guessesRemaining--;
         alert('No, it was more than that.');
@@ -153,6 +155,7 @@ if (q6 === 'texas') {
 
     if (guessesRemaining >= 0) {
       var q7 = prompt(question);
+      q7 = parseInt(q7);
       if (q7 < americanos) {
         guessesRemaining--;
         alert('No, it was more than that.');
@@ -171,5 +174,31 @@ if (q6 === 'texas') {
       alert('Sorry, no bonus points for you. \n\nHow many double short americanos would this Texan drank in a day? \n\nJust like a Tootsie Pop, the world may never know.');
       exit = true;
     }
+  }
+}
+
+
+var arrayOfCocktails = ['old fashioned','martini','manhattan','cuba libre','mai tai','daiquiri','gin and tonic','anything with balance and depth. none of that sweet pre-mix garbage.'];
+guessesRemaining = 6; // reset guessesRemaining
+exit = false; //reset exit
+
+while (exit !== true) {
+  question = 'Psyche! Another bonus round!! \n\nCan you guess a type of cocktail Bryan might enjoy? \n\nYou only have ' + guessesRemaining + ' guesses remaining! \n\nGive us a guess!';
+
+  if (guessesRemaining >= 0) {
+    var q9 = prompt(question);
+    if (arrayOfCocktails.indexOf(q9.toLowerCase()) < 0) {
+      guessesRemaining--;
+      alert('Nope. Try again!');
+      console.log(question + ':' + q9);
+    } else {
+      currentPoints = currentPoints + guessesRemaining;
+      alert('Wowzers, you actually guessed one! \n\nYou ended up with ' + guessesRemaining + ' bonus points and a grand total of ' + currentPoints + '. \n\n The answers were: ' + arrayOfCocktails.toString());
+      console.log(question + ':' + q9);
+      exit = true;
+    }
+  } else {
+    alert('Sorry, no additional bonus points for you. \n\nJust for future reference the possible answers were: ' + arrayOfCocktails.toString());
+    exit = true;
   }
 }
