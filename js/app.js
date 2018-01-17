@@ -16,7 +16,6 @@ do {
 }
 while (!user);
 
-
 question = 'Do you think Bryan talks with a drawl?';
 do {
   // Unresolved bug here and in each subsequent question. See LJ-code201-day5.md for more information.
