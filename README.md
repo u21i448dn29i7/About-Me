@@ -7,3 +7,5 @@
 * HTML/CSS/JS
 ## Interesting techniques:
 * None in this excercise.
+## Driver-Autumn Curtis, Navigator-Bryan Brinson
+* worked on together
