@@ -1,10 +1,11 @@
 # Just some  tidbits about moi.
 
+* Just the basics from the lab3. No stretch goals.
+* Maybe some stretch goals in lab3_stretch
+
 ## Technologies and services leveraged:
 * HTML/CSS/JS
-* Gravatar
-
 ## Interesting techniques:
-* An MD5 hash function to help generate the Gravatar URL. 
-* "display: inline-block" to manipulate the copyleft notice and allow the block to be rotated.
-
+* None in this excercise.
+## Driver-Autumn Curtis, Navigator-Bryan Brinson
+* worked on together
